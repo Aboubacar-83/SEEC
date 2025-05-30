@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEEC - Suivi de Consommation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#3730A3',
+                        accent: '#818CF8',
+                        dark: '#1E1B4B',
+                    },
+                    animation: {
+                        'gradient': 'gradient 8s linear infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(-45deg, #4F46E5, #3730A3, #818CF8, #1E1B4B);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gradient-to-br from-gray-900 to-dark min-h-screen">
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="transform hover:scale-105 transition-transform duration-300">
+                        <img src="image/logo.png" alt="Logo SEEC" class="h-12">
+                    </a>
+                    <h1 class="text-xl font-semibold text-white">SEEC - Maîtrisez vos consommations</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="glass-effect">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-white font-semibold text-lg">SEEC</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-4">
+                        <a href="index.html" class="text-white hover:text-accent px-3 py-2 rounded-md font-medium transition-colors duration-300">Accueil</a>
+                        <a href="dashboard.html" class="text-white hover:text-accent px-3 py-2 rounded-md font-medium transition-colors duration-300">Tableau de bord</a>
+                        <a href="contact.html" class="text-white hover:text-accent px-3 py-2 rounded-md font-medium transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-white hover:text-accent focus:outline-none transition-colors duration-300">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <div class="glass-effect rounded-2xl p-8 mb-8 transform hover:scale-105 transition-transform duration-300">
+                <h2 class="text-4xl font-bold text-white mb-4">Notre Mission</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    SEEC vous aide à surveiller votre consommation d'eau et d'électricité en temps réel, 
+                    pour une meilleure maîtrise de vos dépenses énergétiques.
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">Pourquoi nous choisir ?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-effect p-6 rounded-2xl transform hover:scale-105 transition-all duration-300">
+                    <div class="text-accent mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Suivi précis</h3>
+                    <p class="text-gray-300">Surveillez vos consommations en temps réel avec des données précises et actualisées.</p>
+                </div>
+                <div class="glass-effect p-6 rounded-2xl transform hover:scale-105 transition-all duration-300">
+                    <div class="text-accent mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Interface intuitive</h3>
+                    <p class="text-gray-300">Une interface simple et accessible pour une expérience utilisateur optimale.</p>
+                </div>
+                <div class="glass-effect p-6 rounded-2xl transform hover:scale-105 transition-all duration-300">
+                    <div class="text-accent mb-4">
+                        <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Économies garanties</h3>
+                    <p class="text-gray-300">Recevez des conseils personnalisés pour réduire vos factures d'énergie.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Authentication Section -->
+        <section class="max-w-md mx-auto">
+            <div class="glass-effect rounded-2xl p-8">
+                <h2 class="text-2xl font-bold text-white mb-6 text-center">Connexion</h2>
+                <form id="login-form" class="space-y-4">
+                    <div>
+                        <input type="email" id="email" placeholder="Email" required 
+                               class="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-400"/>
+                    </div>
+                    <div>
+                        <input type="password" id="password" placeholder="Mot de passe" required 
+                               class="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-400"/>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-primary to-secondary text-white py-2 px-4 rounded-lg hover:from-secondary hover:to-primary transition-all duration-300 transform hover:scale-105">
+                        Se connecter
+                    </button>
+                </form>
+
+                <div class="mt-8">
+                    <h2 class="text-2xl font-bold text-white mb-6 text-center">Inscription</h2>
+                    <form id="register-form" class="space-y-4">
+                        <div>
+                            <input type="email" id="reg_email" placeholder="Email" required 
+                                   class="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-400"/>
+                        </div>
+                        <div>
+                            <input type="password" id="reg_password" placeholder="Mot de passe" required 
+                                   class="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-400"/>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-primary to-secondary text-white py-2 px-4 rounded-lg hover:from-secondary hover:to-primary transition-all duration-300 transform hover:scale-105">
+                            S'inscrire
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-effect mt-16">
+        <div class="container mx-auto px-4 py-8">
+            <div class="text-center">
+                <p class="text-gray-400">© 2025 SEEC - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEEC - Tableau de bord</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#3730A3',
+                        accent: '#818CF8',
+                        dark: '#1E1B4B',
+                    },
+                    animation: {
+                        'gradient': 'gradient 8s linear infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(-45deg, #4F46E5, #3730A3, #818CF8, #1E1B4B);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="font-poppins bg-gradient-to-br from-gray-900 to-dark min-h-screen">
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <a href="index.html" class="transform hover:scale-105 transition-transform duration-300">
+                        <img src="image/logo.png" alt="Logo SEEC" class="h-12">
+            </a>    
+                    <h1 class="text-xl font-semibold text-white">Tableau de bord</h1>
+                </div>
+            </div>
+          </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="glass-effect">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-white font-semibold text-lg">SEEC</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-4">
+                        <a href="index.html" class="text-white hover:text-accent px-3 py-2 rounded-md font-medium transition-colors duration-300">Accueil</a>
+                        <a href="dashboard.html" class="text-white hover:text-accent px-3 py-2 rounded-md font-medium transition-colors duration-300">Tableau de bord</a>
+                        <a href="contact.html" class="text-white hover:text-accent px-3 py-2 rounded-md font-medium transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-white hover:text-accent focus:outline-none transition-colors duration-300">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="glass-effect rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-400 text-sm">Consommation Eau</p>
+                        <h3 class="text-2xl font-bold text-white mt-1">120 m³</h3>
+                    </div>
+                    <div class="bg-blue-500/20 p-3 rounded-lg">
+                        <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="flex items-center text-sm">
+                        <span class="text-green-400">↑ 5%</span>
+                        <span class="text-gray-400 ml-2">vs mois dernier</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-effect rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-400 text-sm">Consommation Électricité</p>
+                        <h3 class="text-2xl font-bold text-white mt-1">350 kWh</h3>
+                    </div>
+                    <div class="bg-green-500/20 p-3 rounded-lg">
+                        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="flex items-center text-sm">
+                        <span class="text-red-400">↓ 3%</span>
+                        <span class="text-gray-400 ml-2">vs mois dernier</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-effect rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-400 text-sm">Coût Total</p>
+                        <h3 class="text-2xl font-bold text-white mt-1">160 750 FCFA</h3>
+                    </div>
+                    <div class="bg-purple-500/20 p-3 rounded-lg">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="flex items-center text-sm">
+                        <span class="text-green-400">↑ 2%</span>
+                        <span class="text-gray-400 ml-2">vs mois dernier</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-effect rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-gray-400 text-sm">Économies</p>
+                        <h3 class="text-2xl font-bold text-white mt-1">23 000 FCFA</h3>
+                    </div>
+                    <div class="bg-yellow-500/20 p-3 rounded-lg">
+                        <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <div class="flex items-center text-sm">
+                        <span class="text-green-400">↑ 8%</span>
+                        <span class="text-gray-400 ml-2">vs mois dernier</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div class="glass-effect rounded-2xl p-6">
+                <h2 class="text-xl font-bold text-white mb-6">Consommation Mensuelle</h2>
+                <canvas id="monthlyChart" class="w-full h-64"></canvas>
+            </div>
+            <div class="glass-effect rounded-2xl p-6">
+                <h2 class="text-xl font-bold text-white mb-6">Répartition des Coûts</h2>
+                <canvas id="costChart" class="w-full h-64"></canvas>
+            </div>
+        </div>
+
+        <!-- Consumption History Section -->
+        <section class="glass-effect rounded-2xl p-6 mb-8">
+            <h2 class="text-2xl font-bold text-white mb-6">Historique de consommation</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-white/10">
+                <thead>
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Mois</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Eau (m³)</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Électricité (kWh)</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Coût Total</th>
+                        </tr>
+                </thead>
+                    <tbody class="divide-y divide-white/10">
+                        <tr class="hover:bg-white/5 transition-colors duration-200">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Mars</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">110</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">330</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">150 750 FCFA</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors duration-200">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Avril</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">115</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">340</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">157 500 FCFA</td>
+                        </tr>
+                        <tr class="hover:bg-white/5 transition-colors duration-200">
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">Mai</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">120</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">350</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-white">160 750 FCFA</td>
+                        </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+
+        <!-- Add Consumption Form -->
+        <section class="glass-effect rounded-2xl p-6 mb-8">
+            <h2 class="text-2xl font-bold text-white mb-6">Ajouter une consommation</h2>
+            <form id="consommation-form" class="space-y-4">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div>
+                        <input type="text" id="type" placeholder="Type (eau, électricité...)" required 
+                               class="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-400"/>
+                    </div>
+                    <div>
+                        <input type="number" id="valeur" step="0.01" placeholder="Valeur" required 
+                               class="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-400"/>
+                    </div>
+                    <div>
+                        <input type="date" id="date" required 
+                               class="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent text-white placeholder-gray-400"/>
+                    </div>
+                </div>
+                <button type="submit" 
+                        class="w-full bg-gradient-to-r from-primary to-secondary text-white py-2 px-4 rounded-lg hover:from-secondary hover:to-primary transition-all duration-300 transform hover:scale-105">
+                    Ajouter
+                </button>
+        </form>
+        </section>
+
+        <!-- Logout Button -->
+        <div class="mt-8 text-center">
+            <button onclick="logout()" 
+                    class="bg-gradient-to-r from-red-500 to-red-600 text-white py-2 px-6 rounded-lg hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
+                Se déconnecter
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-effect mt-16">
+        <div class="container mx-auto px-4 py-8">
+            <div class="text-center">
+                <p class="text-gray-400">© 2025 SEEC - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Configuration des graphiques
+        const monthlyCtx = document.getElementById('monthlyChart').getContext('2d');
+        const costCtx = document.getElementById('costChart').getContext('2d');
+
+        // Graphique de consommation mensuelle
+        new Chart(monthlyCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin'],
+                datasets: [{
+                    label: 'Eau (m³)',
+                    data: [100, 105, 110, 115, 120, 125],
+                    borderColor: '#60A5FA',
+                    backgroundColor: 'rgba(96, 165, 250, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }, {
+                    label: 'Électricité (kWh)',
+                    data: [300, 310, 330, 340, 350, 360],
+                    borderColor: '#34D399',
+                    backgroundColor: 'rgba(52, 211, 153, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#fff'
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#fff'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        ticks: {
+                            color: '#fff'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Graphique de répartition des coûts
+        new Chart(costCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Eau', 'Électricité'],
+                datasets: [{
+                    data: [78750, 82000],
+                    backgroundColor: [
+                        'rgba(96, 165, 250, 0.8)',
+                        'rgba(52, 211, 153, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(96, 165, 250, 1)',
+                        'rgba(52, 211, 153, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#fff'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="script/script.js"></script>
+</body>
+</html>
