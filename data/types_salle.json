@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "nom": "Bureau",
+    "description": "Espace de travail individuel"
+  },
+  {
+    "id": 2,
+    "nom": "Salle de réunion",
+    "description": "Espace pour les réunions d'équipe"
+  },
+  {
+    "id": 3,
+    "nom": "Laboratoire",
+    "description": "Espace pour les expériences et recherches"
+  },
+  {
+    "id": 4,
+    "nom": "Salle de classe",
+    "description": "Espace pour l'enseignement"
+  },
+  {
+    "id": 5,
+    "nom": "Amphithéâtre",
+    "description": "Grande salle pour les conférences"
+  }
+] 

@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("login-form");
   const registerForm = document.getElementById("register-form");
   const consommationForm = document.getElementById("consommation-form");
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
 
   if (loginForm) {
     loginForm.addEventListener("submit", async (e) => {
@@ -51,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (consommationForm) {
     consommationForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const type = document.getElementById("type").value;
       const valeur = document.getElementById("valeur").value;
       const date = document.getElementById("date").value;
       const token = localStorage.getItem("token");
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Authorization": `Bearer ${token}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ type, valeur, date }),
+        body: JSON.stringify({ type: "Électricité", valeur, date }),
       });
 
       if (res.ok) {
@@ -102,6 +103,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const li = document.createElement("li");
       li.textContent = `${item.date} - ${item.type} : ${item.valeur}`;
       list.appendChild(li);
+    });
+  }
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
     });
   }
 });

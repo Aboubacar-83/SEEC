@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nom": "Climatiseur",
+    "puissance_nominale": 2000.00,
+    "description": "Système de climatisation"
+  },
+  {
+    "id": 2,
+    "nom": "Éclairage LED",
+    "puissance_nominale": 100.00,
+    "description": "Éclairage à LED"
+  },
+  {
+    "id": 3,
+    "nom": "Ordinateur",
+    "puissance_nominale": 200.00,
+    "description": "Poste de travail"
+  },
+  {
+    "id": 4,
+    "nom": "Projecteur",
+    "puissance_nominale": 300.00,
+    "description": "Projecteur multimédia"
+  },
+  {
+    "id": 5,
+    "nom": "Imprimante",
+    "puissance_nominale": 150.00,
+    "description": "Imprimante multifonction"
+  }
+] 

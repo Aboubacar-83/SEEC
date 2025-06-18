@@ -1,0 +1,322 @@
+[
+    {
+        "id": 1,
+        "nom": "Climatiseur Bureau 101",
+        "type_id": 1,
+        "salle_id": 1,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 2,
+        "nom": "Éclairage Bureau 101",
+        "type_id": 2,
+        "salle_id": 1,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 3,
+        "nom": "PC Bureau 101",
+        "type_id": 3,
+        "salle_id": 1,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 4,
+        "nom": "Imprimante Bureau 101",
+        "type_id": 5,
+        "salle_id": 1,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 5,
+        "nom": "Climatiseur Bureau 102",
+        "type_id": 1,
+        "salle_id": 2,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 6,
+        "nom": "Éclairage Bureau 102",
+        "type_id": 2,
+        "salle_id": 2,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 7,
+        "nom": "PC Bureau 102",
+        "type_id": 3,
+        "salle_id": 2,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 8,
+        "nom": "Imprimante Bureau 102",
+        "type_id": 5,
+        "salle_id": 2,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 9,
+        "nom": "Climatiseur Bureau 301",
+        "type_id": 1,
+        "salle_id": 3,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 10,
+        "nom": "Éclairage Bureau 301",
+        "type_id": 2,
+        "salle_id": 3,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 11,
+        "nom": "PC Bureau 301",
+        "type_id": 3,
+        "salle_id": 3,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 12,
+        "nom": "Imprimante Bureau 301",
+        "type_id": 5,
+        "salle_id": 3,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 13,
+        "nom": "Climatiseur Réunion A",
+        "type_id": 1,
+        "salle_id": 4,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 14,
+        "nom": "Éclairage Réunion A",
+        "type_id": 2,
+        "salle_id": 4,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 15,
+        "nom": "Projecteur Réunion A",
+        "type_id": 4,
+        "salle_id": 4,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 16,
+        "nom": "Climatiseur Réunion B",
+        "type_id": 1,
+        "salle_id": 5,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 17,
+        "nom": "Éclairage Réunion B",
+        "type_id": 2,
+        "salle_id": 5,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 18,
+        "nom": "Projecteur Réunion B",
+        "type_id": 4,
+        "salle_id": 5,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 19,
+        "nom": "Climatiseur Lab Info",
+        "type_id": 1,
+        "salle_id": 6,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 20,
+        "nom": "Éclairage Lab Info",
+        "type_id": 2,
+        "salle_id": 6,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 21,
+        "nom": "PC Lab Info 1",
+        "type_id": 3,
+        "salle_id": 6,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 22,
+        "nom": "PC Lab Info 2",
+        "type_id": 3,
+        "salle_id": 6,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 23,
+        "nom": "PC Lab Info 3",
+        "type_id": 3,
+        "salle_id": 6,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 24,
+        "nom": "Imprimante Lab Info",
+        "type_id": 5,
+        "salle_id": 6,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 25,
+        "nom": "Climatiseur Lab Physique",
+        "type_id": 1,
+        "salle_id": 7,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 26,
+        "nom": "Éclairage Lab Physique",
+        "type_id": 2,
+        "salle_id": 7,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 27,
+        "nom": "PC Lab Physique 1",
+        "type_id": 3,
+        "salle_id": 7,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 28,
+        "nom": "PC Lab Physique 2",
+        "type_id": 3,
+        "salle_id": 7,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 29,
+        "nom": "Imprimante Lab Physique",
+        "type_id": 5,
+        "salle_id": 7,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 30,
+        "nom": "Climatiseur Classe 201",
+        "type_id": 1,
+        "salle_id": 8,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 31,
+        "nom": "Éclairage Classe 201",
+        "type_id": 2,
+        "salle_id": 8,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 32,
+        "nom": "Projecteur Classe 201",
+        "type_id": 4,
+        "salle_id": 8,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 33,
+        "nom": "Climatiseur Classe 202",
+        "type_id": 1,
+        "salle_id": 9,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": 34,
+        "nom": "Éclairage Classe 202",
+        "type_id": 2,
+        "salle_id": 9,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": "35",
+        "nom": "Projecteur Classe 202",
+        "type_id": 4,
+        "salle_id": 9,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": "36",
+        "nom": "Climatiseur Amphithéâtre",
+        "type_id": 1,
+        "salle_id": 10,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": "37",
+        "nom": "Éclairage Amphithéâtre",
+        "type_id": 2,
+        "salle_id": 10,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "id": "38",
+        "nom": "Projecteur Amphithéâtre",
+        "type_id": 4,
+        "salle_id": 10,
+        "statut_alimentation": true,
+        "date_installation": "2024-01-01"
+    },
+    {
+        "nom": "Climatiseur Doumbia",
+        "type_id": 1,
+        "salle_id": 11,
+        "date_installation": "2025-06-18",
+        "statut_alimentation": true,
+        "id": "39"
+    },
+    {
+        "nom": "app test",
+        "type_id": 1,
+        "salle_id": 11,
+        "date_installation": "2025-06-18",
+        "statut_alimentation": true,
+        "id": "40"
+    }
+]

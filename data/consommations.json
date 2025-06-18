@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1,
+    "appareil_id": 1,
+    "valeur": 48.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 2,
+    "appareil_id": 2,
+    "valeur": 2.4,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 3,
+    "appareil_id": 3,
+    "valeur": 4.8,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 4,
+    "appareil_id": 4,
+    "valeur": 3.6,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 5,
+    "appareil_id": 5,
+    "valeur": 48.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 6,
+    "appareil_id": 6,
+    "valeur": 2.4,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 7,
+    "appareil_id": 7,
+    "valeur": 4.8,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 8,
+    "appareil_id": 8,
+    "valeur": 3.6,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 9,
+    "appareil_id": 9,
+    "valeur": 60.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 10,
+    "appareil_id": 10,
+    "valeur": 3.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 11,
+    "appareil_id": 11,
+    "valeur": 6.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 12,
+    "appareil_id": 12,
+    "valeur": 4.5,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 13,
+    "appareil_id": 13,
+    "valeur": 48.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 14,
+    "appareil_id": 14,
+    "valeur": 2.4,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 15,
+    "appareil_id": 15,
+    "valeur": 7.2,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 16,
+    "appareil_id": 16,
+    "valeur": 48.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 17,
+    "appareil_id": 17,
+    "valeur": 2.4,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 18,
+    "appareil_id": 18,
+    "valeur": 7.2,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 19,
+    "appareil_id": 19,
+    "valeur": 48.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 20,
+    "appareil_id": 20,
+    "valeur": 2.4,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 21,
+    "appareil_id": 21,
+    "valeur": 4.8,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 22,
+    "appareil_id": 22,
+    "valeur": 4.8,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 23,
+    "appareil_id": 23,
+    "valeur": 4.8,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 24,
+    "appareil_id": 24,
+    "valeur": 3.6,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 25,
+    "appareil_id": 25,
+    "valeur": 48.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 26,
+    "appareil_id": 26,
+    "valeur": 2.4,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 27,
+    "appareil_id": 27,
+    "valeur": 4.8,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 28,
+    "appareil_id": 28,
+    "valeur": 4.8,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 29,
+    "appareil_id": 29,
+    "valeur": 3.6,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 30,
+    "appareil_id": 30,
+    "valeur": 48.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 31,
+    "appareil_id": 31,
+    "valeur": 2.4,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 32,
+    "appareil_id": 32,
+    "valeur": 7.2,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 33,
+    "appareil_id": 33,
+    "valeur": 48.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 34,
+    "appareil_id": 34,
+    "valeur": 2.4,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 35,
+    "appareil_id": 35,
+    "valeur": 7.2,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 36,
+    "appareil_id": 36,
+    "valeur": 48.0,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 37,
+    "appareil_id": 37,
+    "valeur": 2.4,
+    "date": "2024-06-17"
+  },
+  {
+    "id": 38,
+    "appareil_id": 38,
+    "valeur": 7.2,
+    "date": "2024-06-17"
+  }
+] 

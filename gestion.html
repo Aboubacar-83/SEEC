@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEEC - Gestion des Salles et Appareils</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="image/logo.png" alt="Logo SEEC">
+                <h1>SEEC</h1>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="dashboard.html" class="nav-link">Tableau de bord</a>
+                <a href="gestion.html" class="nav-link active">Gestion</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html" class="nav-link">Accueil</a>
+            <a href="dashboard.html" class="nav-link">Tableau de bord</a>
+            <a href="gestion.html" class="nav-link active">Gestion</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="text-center mb-10">
+                    <h1 class="section-title">Gestion des Salles et Appareils</h1>
+                    <p class="section-subtitle">
+                        Gérez vos espaces et équipements électriques en toute simplicité. 
+                        Contrôlez l'alimentation et surveillez les consommations en temps réel.
+                    </p>
+                </div>
+
+                <!-- Gestion des Salles -->
+                <div class="card mb-8">
+                    <div class="card-header">
+                        <h2 class="card-title">Gestion des Salles</h2>
+                        <button class="btn btn-primary" onclick="showModal('salle-modal')">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                            </svg>
+                            Ajouter une salle
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <div id="salles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Les cartes des salles seront générées ici -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gestion des Appareils -->
+                <div class="card mb-8">
+                    <div class="card-header">
+                        <h2 class="card-title">Gestion des Appareils</h2>
+                        <button class="btn btn-primary" onclick="showModal('appareil-modal')">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                            </svg>
+                            Ajouter un appareil
+                        </button>
+                    </div>
+                    <div class="card-content">
+                        <div id="appareils-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Les cartes des appareils seront générées ici -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphique de Consommation -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Consommation par Salle</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="chart-container">
+                            <canvas id="consommation-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Ajout Salle -->
+    <div class="modal" id="salle-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Ajouter une nouvelle salle</h3>
+                <button class="modal-close" onclick="hideModal('salle-modal')">&times;</button>
+            </div>
+            <form id="salle-form">
+                <div class="form-group">
+                    <label for="salle-nom" class="form-label">Nom de la salle</label>
+                    <input type="text" id="salle-nom" name="nom" class="form-input" placeholder="Ex: Bureau 103" required>
+                </div>
+                <div class="form-group">
+                    <label for="salle-type" class="form-label">Type de salle</label>
+                    <select id="salle-type" name="type" class="form-select" required>
+                        <option value="">Sélectionner un type</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="salle-etage" class="form-label">Étage</label>
+                    <input type="number" id="salle-etage" name="etage" class="form-input" placeholder="1" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="salle-superficie" class="form-label">Superficie (m²)</label>
+                    <input type="number" id="salle-superficie" name="superficie" class="form-input" placeholder="25" min="1" step="0.01" required>
+                </div>
+                <div class="flex gap-4">
+                    <button type="submit" class="btn btn-primary flex-1">Ajouter</button>
+                    <button type="button" class="btn btn-outline" onclick="hideModal('salle-modal')">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Ajout Appareil -->
+    <div class="modal" id="appareil-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Ajouter un nouvel appareil</h3>
+                <button class="modal-close" onclick="hideModal('appareil-modal')">&times;</button>
+            </div>
+            <form id="appareil-form">
+                <div class="form-group">
+                    <label for="appareil-nom" class="form-label">Nom de l'appareil</label>
+                    <input type="text" id="appareil-nom" name="nom" class="form-input" placeholder="Ex: Climatiseur Bureau 101" required>
+                </div>
+                <div class="form-group">
+                    <label for="appareil-type" class="form-label">Type d'appareil</label>
+                    <select id="appareil-type" name="type" class="form-select" required>
+                        <option value="">Sélectionner un type</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appareil-salle" class="form-label">Salle d'affectation</label>
+                    <select id="appareil-salle" name="salle" class="form-select" required>
+                        <option value="">Sélectionner une salle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appareil-date" class="form-label">Date d'installation</label>
+                    <input type="date" id="appareil-date" name="date" class="form-input" required>
+                </div>
+                <div class="flex gap-4">
+                    <button type="submit" class="btn btn-primary flex-1">Ajouter</button>
+                    <button type="button" class="btn btn-outline" onclick="hideModal('appareil-modal')">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Détails Salle -->
+    <div class="modal" id="salle-details-modal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h3 class="modal-title" id="salle-details-title">Détails de la Salle</h3>
+                <button class="modal-close" onclick="hideModal('salle-details-modal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Informations de la salle -->
+                    <div class="lg:col-span-1">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Informations Générales</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="text-sm text-gray-400">Nom de la salle</label>
+                                        <p class="font-semibold" id="salle-details-nom"></p>
+                                    </div>
+                                    <div>
+                                        <label class="text-sm text-gray-400">Type</label>
+                                        <p class="font-semibold" id="salle-details-type"></p>
+                                    </div>
+                                    <div>
+                                        <label class="text-sm text-gray-400">Étage</label>
+                                        <p class="font-semibold" id="salle-details-etage"></p>
+                                    </div>
+                                    <div>
+                                        <label class="text-sm text-gray-400">Superficie</label>
+                                        <p class="font-semibold" id="salle-details-superficie"></p>
+                                    </div>
+                                    <div>
+                                        <label class="text-sm text-gray-400">Statut</label>
+                                        <div class="badge" id="salle-details-statut"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Statistiques de la salle -->
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h4 class="card-title">Statistiques</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="text-center p-3 bg-primary/10 rounded-lg">
+                                        <div class="text-2xl font-bold text-primary" id="salle-details-total-appareils">0</div>
+                                        <div class="text-sm text-gray-400">Total</div>
+                                    </div>
+                                    <div class="text-center p-3 bg-accent/10 rounded-lg">
+                                        <div class="text-2xl font-bold text-accent" id="salle-details-appareils-actifs">0</div>
+                                        <div class="text-sm text-gray-400">Actifs</div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <span class="text-sm text-gray-400">Consommation actuelle:</span>
+                                        <span class="text-lg font-bold text-primary" id="salle-details-consommation">0 kWh</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-2">
+                                        <div class="bg-gradient-to-r from-primary to-accent h-2 rounded-full transition-all duration-300" 
+                                             id="salle-details-progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Contrôles de la salle -->
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h4 class="card-title">Contrôles</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="space-y-3">
+                                    <button id="salle-details-toggle-btn" class="btn w-full">
+                                        Toggle Salle
+                                    </button>
+                                    <button onclick="toggleAllAppareilsInSalle()" class="btn btn-outline w-full">
+                                        Toggle Tous les Appareils
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Liste des appareils -->
+                    <div class="lg:col-span-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Appareils de la Salle</h4>
+                                <button onclick="showModal('appareil-modal')" class="btn btn-primary btn-sm">
+                                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                    </svg>
+                                    Ajouter un appareil
+                                </button>
+                            </div>
+                            <div class="card-content">
+                                <div id="salle-appareils-list" class="space-y-3">
+                                    <!-- Les appareils seront générés ici -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/gestion.js"></script>
+</body>
+</html> 

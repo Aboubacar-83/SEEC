@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "nom": "Bureau 101",
+        "type_id": 1,
+        "etage": 1,
+        "superficie": 20,
+        "statut_alimentation": true
+    },
+    {
+        "id": "2",
+        "nom": "Bureau 102",
+        "type_id": 1,
+        "etage": 1,
+        "superficie": 20,
+        "statut_alimentation": true
+    },
+    {
+        "id": 3,
+        "nom": "Bureau 301",
+        "type_id": 1,
+        "etage": 3,
+        "superficie": 25,
+        "statut_alimentation": true
+    },
+    {
+        "id": 4,
+        "nom": "Salle de réunion A",
+        "type_id": 2,
+        "etage": 1,
+        "superficie": 30,
+        "statut_alimentation": true
+    },
+    {
+        "id": 5,
+        "nom": "Salle de réunion B",
+        "type_id": 2,
+        "etage": 2,
+        "superficie": 30,
+        "statut_alimentation": true
+    },
+    {
+        "id": 6,
+        "nom": "Laboratoire Informatique",
+        "type_id": 3,
+        "etage": 2,
+        "superficie": 50,
+        "statut_alimentation": true
+    },
+    {
+        "id": "7",
+        "nom": "Laboratoire Physique",
+        "type_id": 3,
+        "etage": 2,
+        "superficie": 50,
+        "statut_alimentation": true
+    },
+    {
+        "id": 8,
+        "nom": "Salle de classe 201",
+        "type_id": 4,
+        "etage": 2,
+        "superficie": 40,
+        "statut_alimentation": true
+    },
+    {
+        "id": 9,
+        "nom": "Salle de classe 202",
+        "type_id": 4,
+        "etage": 2,
+        "superficie": 40,
+        "statut_alimentation": true
+    },
+    {
+        "id": 10,
+        "nom": "Amphithéâtre",
+        "type_id": 5,
+        "etage": 1,
+        "superficie": 100,
+        "statut_alimentation": true
+    },
+    {
+        "nom": "Doumbia",
+        "type_id": 1,
+        "etage": 20,
+        "superficie": 200,
+        "statut_alimentation": true,
+        "id": "11"
+    }
+]
